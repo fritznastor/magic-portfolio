@@ -64,17 +64,19 @@ export default function Home() {
       />
       <Column fillWidth paddingY="l" gap="m">
         <Column maxWidth="s">
-          <RevealFx translateY="4" fillWidth horizontal="start" paddingBottom="m">
-            <Heading wrap="balance" variant="display-strong-l">
-              {home.headline}
-            </Heading>
+          <RevealFx translateY="4" fillWidth horizontal="center" paddingBottom="m">
+            <Flex horizontal="center">
+              <Heading wrap="balance" variant="display-strong-l">
+                {home.headline}
+              </Heading>
+            </Flex>
           </RevealFx>
           <RevealFx translateY="8" delay={0.2} fillWidth horizontal="start" paddingBottom="m">
             <Text wrap="balance" onBackground="neutral-weak" variant="heading-default-xl">
               {home.subline}
             </Text>
           </RevealFx>
-          <RevealFx translateY="12" delay={0.4} horizontal="start">
+          <RevealFx translateY="12" delay={0.03} horizontal="start">
             <Button
               id="about"
               data-border="rounded"
@@ -97,6 +99,10 @@ export default function Home() {
           </RevealFx>
         </Column>
       </Column>
+      {/* Add the image in the center */}
+      <Flex horizontal="center" paddingY="l">
+        <img src="/images/fritz.jpeg" alt="Description of image" style={{ maxWidth: "60%", height: "auto", borderRadius: "30px", marginTop: "-50px" }} />
+      </Flex>
       <RevealFx translateY="16" delay={0.6}>
         <Projects range={[1, 1]} />
       </RevealFx>

@@ -1,11 +1,11 @@
-const baseURL = "demo.magic-portfolio.com";
+const baseURL = "fritznastor.com";
 
 const routes = {
   "/": true,
   "/about": true,
-  "/work": true,
-  "/blog": true,
-  "/gallery": true,
+  "/work": false,
+  "/blog": false,
+  "/gallery": false,
 };
 
 // Enable password protection on selected routes
@@ -15,10 +15,10 @@ const protectedRoutes = {
 };
 
 const style = {
-  theme: "dark", // dark | light
-  neutral: "gray", // sand | gray | slate
-  brand: "emerald", // blue | indigo | violet | magenta | pink | red | orange | yellow | moss | green | emerald | aqua | cyan
-  accent: "orange", // blue | indigo | violet | magenta | pink | red | orange | yellow | moss | green | emerald | aqua | cyan
+  theme: "light", // dark | light
+  neutral: "sand", // sand | gray | slate
+  brand: "blue", // blue | indigo | violet | magenta | pink | red | orange | yellow | moss | green | emerald | aqua | cyan
+  accent: "moss", // blue | indigo | violet | magenta | pink | red | orange | yellow | moss | green | emerald | aqua | cyan
   solid: "contrast", // color | contrast
   solidStyle: "flat", // flat | plastic
   border: "playful", // rounded | playful | conservative
@@ -28,13 +28,13 @@ const style = {
 
 const effects = {
   mask: {
-    cursor: true,
+    cursor: false,
     x: 0,
     y: 0,
     radius: 75,
   },
   gradient: {
-    display: true,
+    display: false,
     x: 50,
     y: 0,
     width: 100,
@@ -51,12 +51,12 @@ const effects = {
     opacity: 20,
   },
   lines: {
-    display: false,
+    display: true,
     color: "neutral-alpha-weak",
     opacity: 100,
   },
   grid: {
-    display: false,
+    display: true,
     color: "neutral-alpha-weak",
     opacity: 100,
   },

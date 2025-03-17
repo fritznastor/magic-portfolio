@@ -1,19 +1,19 @@
 import { InlineCode } from "@/once-ui/components";
 
 const person = {
-  firstName: "Selene",
-  lastName: "Yu",
+  firstName: "Fritz",
+  lastName: "Nastor",
   get name() {
     return `${this.firstName} ${this.lastName}`;
   },
-  role: "Design Engineer",
-  avatar: "/images/avatar.jpg",
-  location: "Asia/Jakarta", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
-  languages: ["English", "Bahasa"], // optional: Leave the array empty if you don't want to display languages
+  role: "Software Engineer",
+  avatar: "/images/fritz.jpeg",
+  location: "America/Chicago", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
+  languages: [], // optional: Leave the array empty if you don't want to display languages
 };
 
 const newsletter = {
-  display: true,
+  display: false, // set to true to display the newsletter section
   title: <>Subscribe to {person.firstName}'s Newsletter</>,
   description: (
     <>
@@ -29,12 +29,12 @@ const social = [
   {
     name: "GitHub",
     icon: "github",
-    link: "https://github.com/once-ui-system/nextjs-starter",
+    link: "https://github.com/fritznastor",
   },
   {
     name: "LinkedIn",
     icon: "linkedin",
-    link: "https://www.linkedin.com/company/once-ui/",
+    link: "https://www.linkedin.com/in/fritznastor/",
   },
   {
     name: "X",
@@ -44,7 +44,7 @@ const social = [
   {
     name: "Email",
     icon: "email",
-    link: "mailto:example@gmail.com",
+    link: "mailto:fritznastor@gmail.com",
   },
 ];
 
@@ -52,13 +52,7 @@ const home = {
   label: "Home",
   title: `${person.name}'s Portfolio`,
   description: `Portfolio website showcasing my work as a ${person.role}`,
-  headline: <>Design engineer and builder</>,
-  subline: (
-    <>
-      I'm Selene, a design engineer at <InlineCode>FLY</InlineCode>, where I craft intuitive
-      <br /> user experiences. After hours, I build my own projects.
-    </>
-  ),
+  headline: <>Hello, I'm Fritz Nastor :D</>,
 };
 
 const about = {
@@ -71,9 +65,11 @@ const about = {
   },
   avatar: {
     display: true,
+    width: "100%", // Adjust the width to fit the whole picture
+    height: "auto", // Adjust the height to maintain aspect ratio
   },
   calendar: {
-    display: true,
+    display: false,
     link: "https://cal.com",
   },
   intro: {
@@ -81,9 +77,31 @@ const about = {
     title: "Introduction",
     description: (
       <>
-        Selene is a Jakarta-based design engineer with a passion for transforming complex challenges
-        into simple, elegant design solutions. Her work spans digital interfaces, interactive
-        experiences, and the convergence of design and technology.
+        yo, thanks for checking out my website. i'm fritz nastor – an aspiring software engineer based in chicago.
+        i am passionate about working on meaningful projects and technologies that have the ability to leave a positive 
+        impact on people's lives. i'm always looking for new ways to learn and grow as a developer. i graduated from 
+        DePaul University with a degree in computer science and a minor in data science.
+      </>
+    ),
+  },
+  whoAmI: {
+    display: true,
+    title: "Who am I",
+    content: (
+      <>
+        <p style={{ marginBottom: '1rem' }}>
+          I'm a software engineer who believes in creating technology that makes a positive 
+          difference. When I'm not coding, you can find me exploring new technologies, 
+          contributing to open-source projects, or mentoring aspiring developers.
+        </p>
+        <p>
+          I'm particularly interested in:
+          <ul style={{ marginTop: '0.5rem', marginLeft: '1.5rem' }}>
+            <li>Web Development</li>
+            <li>Artificial Intelligence & Machine Learning</li>
+            <li>Creating Intuitive User Experiences</li>
+          </ul>
+        </p>
       </>
     ),
   },
@@ -135,15 +153,11 @@ const about = {
   },
   studies: {
     display: true, // set to false to hide this section
-    title: "Studies",
+    title: "Education",
     institutions: [
       {
-        name: "University of Jakarta",
-        description: <>Studied software engineering.</>,
-      },
-      {
-        name: "Build the Future",
-        description: <>Studied online marketing and personal branding.</>,
+        name: "DePaul University",
+        description: <>Bachelors in Computer Science</>,
       },
     ],
   },
